@@ -1,0 +1,18 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./neko.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Torrent {
+  id       Int    @id @default(autoincrement())
+  name     String
+  filepath String
+  infohash String
+}

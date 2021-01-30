@@ -5,11 +5,46 @@
   "main": "index.ts",
   "author": "arung-agamani <arung.agamani@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "server": "ts-node index.ts"
+  },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@prisma/client": "^2.15.0",
+    "@types/express": "^4.17.11",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rss-parser": "^3.10.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "ut_metadata": "^3.5.2",
+    "ut_pex": "^3.0.0",
+    "webtorrent": "^0.112.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@types/node": "^14.14.22"
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@prisma/cli": "^2.15.0",
+    "@types/node": "^14.14.22",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/webtorrent": "^0.109.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^5.0.0-beta.6",
+    "style-loader": "^2.0.0",
+    "ts-node": "^9.1.1",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
