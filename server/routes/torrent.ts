@@ -6,6 +6,7 @@ import * as expressObject from '../express'
 import NekoTorrent from '../../nekotorrent/nekotorrent'
 
 const nekoTorrPass = process.env.NEKOTORRENT_PASSWORD
+console.log('Pass: ', nekoTorrPass);
 const torrentRouter = Router();
 // const prisma = new PrismaClient();
 const torrentClient: NekoTorrent = new NekoTorrent()
