@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "webpack serve --config webpack.config.js",
     "watch": "webpack --watch --config webpack.config.js",
+    "build": "webpack --config webpack.prod.js",
     "server": "ts-node index.ts"
   },
   "dependencies": {
