@@ -9,6 +9,7 @@ import { TorrentTransmissionData } from './interfaces';
 import { PrismaClient } from '@prisma/client';
 
 const outputDir = path.resolve(__dirname, 'out');
+const maxGB_allowance = parseInt(process.env.MAX_GB)
 
 const { promisify } = require('util');
 const readdir = promisify(fs.readdir);
@@ -101,7 +102,7 @@ class NekoTorrent {
             this.client.add(torrentId, { path: outputDir }, (torr) => {
                 torr.pause()
                 console.log(`Loaded "${torr.name}"`);
-                if (torr.length + totalSize > 1024*1024*1024) {
+                if (torr.length + totalSize > maxGB_allowance*1024*1024*1024) {
                     console.log(`Aborting "${torr.name}. Size exceeds limit`)
                         this.deleteTorrent(torrentId);
                         torr.destroy()
