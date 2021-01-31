@@ -5,4 +5,6 @@ export interface TorrentTransmissionData {
     uploaded: number;
     uploadSpeed: number;
     progress: number;
+    size: number;
+    seedRatio: number
 }

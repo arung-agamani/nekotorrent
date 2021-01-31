@@ -24,6 +24,7 @@ export function getServerInstance(): Express {
 export function initialize(server: Express): void {
     server.use(bodyParser.json())
     server.use(bodyParser.urlencoded({ extended: true }))
+    server.use('/nekotorrent', express.static(path.resolve(__dirname, '..', 'nekotorrent', 'out')))
     server.use(express.static(path.resolve(__dirname, '..', 'dist')));
     server.use('/torrent', torrentRoutes);
     server.use('/nyaa', nyaaRoutes);

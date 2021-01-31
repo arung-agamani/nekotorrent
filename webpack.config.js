@@ -16,6 +16,10 @@ const config = {
             {
                 test: /\.tsx?$/,
                 loader: "awesome-typescript-loader"
+            },
+            {
+                test: /\.(jpe?g|gif|png|svg)$/i,
+                type: 'asset/resource'
             }
         ]
     },
